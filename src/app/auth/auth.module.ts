@@ -5,6 +5,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   exports:[
     LoginComponent,RegisterComponent
-  ]
+  ],
+  providers:[AuthService]
 })
 export class AuthModule { }

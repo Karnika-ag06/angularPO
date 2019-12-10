@@ -35,13 +35,13 @@ get password(){
     this.authService.validateUser(this.loginForm.value.userEmail,this.loginForm.value.userPass).subscribe(
   data=>{
     alert(data);
-    if(data === 'Seller'){
+    if(data == 'Seller'){
       this.router.navigate(['./']);
     }
-    else if(data === 'Buyer'){
-      this.router.navigate(['./']);
+    else if(data == 'Buyer'){
+      this.router.navigate(['./buyerPage']);
     }
-    else if(data === 'Vendor'){
+    else if(data == 'Vendor'){
       this.router.navigate(['./']);
     }
     else{

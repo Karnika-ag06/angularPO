@@ -16,7 +16,8 @@ export class AuthService {
     }
 
 
-  public validateUser(userEmail:any,userPass:any):Observable<any>{
-  return this.http.post<any>("http://localhost:1111/PurchaseOrderFrontEnd/userValidate?userEmail="+userEmail+"&&userPass="+userPass,null,{responseType:'text' as 'json'});
+   validateUser(userEmail:any,userPass:any):Observable<any>{
+  return this.http.post<any>("http://localhost:1111/PurchaseOrderFrontEnd/userValidate?userEmail="
+  +userEmail+"&&userPass="+userPass,null,{responseType:'text' as 'json'});
 }
 }

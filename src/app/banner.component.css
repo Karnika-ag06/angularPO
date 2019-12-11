@@ -1,0 +1,39 @@
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+}
+
+.carousel-control-prev, .carousel-control-next {
+    font-size: 25px;
+    margin-left: -4%;
+    margin-right: -4%;
+    position: absolute;
+}
+
+.hero {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0px;
+    transform: translate(0%, -50%);
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+.text-hero {
+    font-size: 70px;
+    
+    
+}
+
+.text-h5-hero {
+    font-size: 30px;
+    letter-spacing: 3px;
+    line-height: 40px;
+    
+    
+    
+}

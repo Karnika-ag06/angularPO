@@ -3,14 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { BuyerComponent } from './buyer/buyer.component';
+import { BannerComponent } from './banner.component';
+import { VendorComponent } from './vendor/vendor.component';
 // import { RaisePOComponent } from './buyer/raise-po/raise-po.component';
 
 
 
 const routes: Routes = [
+  {path:'',redirectTo:'/',pathMatch:'full'},
     {path:'login',component:LoginComponent},
     {path:'register',component:RegisterComponent},
-    {path:'buyerPage',component:BuyerComponent},
+    {path:'buyerPage',loadChildren: './buyer/buyer.module#BuyerModule'},
+    {path:'vendorPage',loadChildren: './vendor/vendor.module#VendorModule'}
+    
     // {path:'raisepo',component:RaisePOComponent}
   
 ];
@@ -20,6 +25,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-// export const routingComponents=[
-//   LoginComponent
-//  ]

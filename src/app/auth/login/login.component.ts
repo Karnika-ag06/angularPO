@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+logValue:boolean=false;
   constructor(private authService:AuthService,private router:Router) { }
 
   ngOnInit() {
@@ -34,15 +34,20 @@ get password(){
     console.log(this.loginForm.value.userEmail,this.loginForm.value.userPass);
     this.authService.validateUser(this.loginForm.value.userEmail,this.loginForm.value.userPass).subscribe(
   data=>{
-    alert(data);
-    if(data == 'Seller'){
+let uObj=data;
+console.log(data);
+console.log(uObj);
+sessionStorage.setItem("userObj",JSON.stringify(uObj));
+
+    alert(uObj.userRole);
+    if(uObj.userRole == 'Seller'){
       this.router.navigate(['./']);
     }
-    else if(data == 'Buyer'){
+    else if(uObj.userRole == 'Buyer'){
       this.router.navigate(['./buyerPage']);
     }
-    else if(data == 'Vendor'){
-      this.router.navigate(['./']);
+    else if(uObj.userRole == 'Vendor'){
+      this.router.navigate(['./vendorPage']);
     }
     else{
       alert("invalid!");

@@ -5,13 +5,15 @@ import { BuyerRoutingModule } from './buyer-routing.module';
 import { BuyerComponent } from './buyer.component';
 import { RaisePOComponent } from './raise-po/raise-po.component';
 import { BuyerService } from './buyer.service';
+import { FormsModule } from '@angular/forms';
+import { ViewallComponent } from './viewall.component';
 
 
 @NgModule({
-  declarations: [BuyerComponent, RaisePOComponent],
+  declarations: [BuyerComponent, RaisePOComponent, ViewallComponent],
   imports: [
     CommonModule,
-    BuyerRoutingModule
+    BuyerRoutingModule,FormsModule
   ],
   exports: [
     BuyerComponent

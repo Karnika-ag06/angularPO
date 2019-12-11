@@ -1,19 +1,64 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <ul class="navbar-nav">
-      <li class="nav-item active" routerLinkActive="active">
-        <a class="nav-link disabled" routerLink="/">PurchaseOrderManagement</a>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark"  *ngIf="flag==false &&  logged==undefined">
+  <ul class="navbar-nav">
+    <li class="nav-item active" routerLinkActive="active">
+      <a class="nav-link disabled" routerLink="/Home">PurchaseOrderManagement</a>
+    </li>
+    
+    <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/">Home</a>
       </li>
+      
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/login">Login</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/register">Register</a>
+    </li>    
+  </ul>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark" *ngIf="flag==true &&  logged=='vendor'">
+  <ul class="navbar-nav">
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="/login">Login</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="/register">Register</a>
-      </li>
-      
-      
-      
-    </ul>
-  </nav>
+          <a class="nav-link" routerLink="/" >Home</a>
+        </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/viewProducts">View All Products</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/viewAll">View All Available Products</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/addQuantity">Add Quantity</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="logout()">LogOut</a>
+    </li>
+
+  </ul>
+</nav>
+
+
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark"  *ngIf="flag==true &&  logged=='buyer'">
+  <ul class="navbar-nav">
+    <li class="nav-item active" routerLinkActive="active">
+      <a class="nav-link " routerLink="/raisepo">Raise Purchase Order</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/viewAll">viewAllProducts</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="#">Purchase Order</a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" (click)="logout()">LogOut</a>
+    </li>
+    
+    
+    
+  </ul>
+</nav>
   
   
-  <router-outlet></router-outlet>

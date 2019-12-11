@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BuyerModule } from './buyer/buyer.module';
+import { VendorModule } from './vendor/vendor.module';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { BuyerModule } from './buyer/buyer.module';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-    HttpClientModule,BuyerModule
+    HttpClientModule,BuyerModule,VendorModule
    
     
   ],

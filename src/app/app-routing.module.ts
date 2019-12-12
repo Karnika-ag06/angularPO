@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { BuyerComponent } from './buyer/buyer.component';
-import { BannerComponent } from './banner.component';
-import { VendorComponent } from './vendor/vendor.component';
+// import { BuyerComponent } from './buyer/buyer.component';
+// import { BannerComponent } from './banner.component';
+// import { VendorComponent } from './vendor/vendor.component';
 // import { RaisePOComponent } from './buyer/raise-po/raise-po.component';
 
 

@@ -42,4 +42,18 @@ public quantity;number;
  deleteRow(){
    this.productsArrToDisplay = this.productsArrToDisplay.filter(item => item.isSelected! === false);
  }
+
+
+ RaisePo(){
+console.log(this.productsArrToDisplay);
+  console.log(sessionStorage.getItem("userObj"));
+   let obj=JSON.parse(sessionStorage.getItem("userObj"));  
+   let uId=obj.userId;
+   console.log( this.productsArrToDisplay+" "+uId);
+   this.buyerService.raisePoForm(this.productsArrToDisplay,uId).
+   subscribe(data => console.log("Value Added" +this.productsArrToDisplay));
+   alert("Purchase Order Raised");
+    window.location.reload(true);
+ }
+
 }
